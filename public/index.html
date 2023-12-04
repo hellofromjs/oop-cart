@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header">Add a Product</h5>
+                    <div class="card-body">
+                        <div class="alert alert-danger d-none" role="alert" id="error-list">
+                            <ul class="m-0"></ul>
+                          </div>
+                        <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="product-name" placeholder="Product Name">
+                          </div>
+                          <div class="mb-3">
+                            <input type="number" class="form-control" name="product-price" placeholder="Product Price">
+                          </div>
+                          <div class="mb-3">
+                            <input type="number" class="form-control" name="product-year" placeholder="Product Year">
+                          </div>
+                          <div class="">
+                            <button type="submit" class="btn btn-primary w-100" value="create-product-btn">Save</button>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-6 d-flex flex-column gap-3" id="products-list"></div>
+        </div>
+    </div>
+
+   <template id="product-item-template">
+    <div class="p-3 border rounded-end text-center">
+        <strong>Product: </strong> <span value="product-name"></span> <strong>Product Price</strong> <span value="product-price"></span> <strong>Product Year: </strong> <span value="product-year"></span>
+      </div>
+   </template>
+    
+    <script src="app.js"></script>
+</body>
+</html>
