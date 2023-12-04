@@ -78,14 +78,12 @@ export default class ProductForm
     {
         const errors = []
 
-        year = parseInt(year)
-
         if (year == "")
         {
             errors.push(`${who} must not be empty`)
         }
 
-        if (year < 1000)
+        if (parseInt(year) < 1000)
         {
             errors.push(`${who} number is too low`)
         }

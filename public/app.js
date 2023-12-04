@@ -164,11 +164,10 @@ var ProductForm = /*#__PURE__*/function () {
     key: "validate_year",
     value: function validate_year(who, year) {
       var errors = [];
-      year = parseInt(year);
       if (year == "") {
         errors.push("".concat(who, " must not be empty"));
       }
-      if (year < 1000) {
+      if (parseInt(year) < 1000) {
         errors.push("".concat(who, " number is too low"));
       }
       return errors;
